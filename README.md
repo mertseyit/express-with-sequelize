@@ -40,7 +40,7 @@ src klasörü içindeki `.env` dosyasınında kendi ayarlamalarınızı yapını
 
 ## Veritabanının ve Tabloların Oluşturulması
 
-Proje içerisinde migrate sistemi olmadığından dolayı veri tabanlarını kendiniz oluşturmanız gerekmektedir. Bu veri tabanlarını istediğiniz DBMS üzerinden `models` klasörü altındaki yer alan modelleri referans alarak oluşturabilirsiniz.`
+Proje içerisinde migrate sistemi olmadığından dolayı veri tabanlarını kendiniz oluşturmanız gerekmektedir. Bu veri tabanlarını istediğiniz DBMS üzerinden `models` klasörü altındaki yer alan modelleri referans alarak oluşturabilirsiniz.
 
 # Postman
 
