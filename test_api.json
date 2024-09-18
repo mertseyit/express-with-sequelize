@@ -1,0 +1,931 @@
+{
+    "info": {
+        "_postman_id": "1656d0fe-1f11-4c3f-890a-18e2cc7f4f1a",
+        "name": "sequelize_test_project",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "auths",
+            "item": [
+                {
+                    "name": "user",
+                    "item": [
+                        {
+                            "name": "login",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "http://localhost:8000/api/v1/user/login",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "user",
+                                        "login"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "8000"
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\n  \"email\":\"ahmet@gmail.com\",\n  \"password\":\"Test.123\"\n}"
+                                }
+                            }
+                        },
+                        {
+                            "name": "register",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "http://localhost:8000/api/v1/user/register",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "user",
+                                        "register"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "8000"
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\n  \"name\":\"Ahmet\",\n  \"lastname\":\"Karaosmanoğlu\",\n  \"email\":\"ahmet@gmail.com\",\n  \"password\":\"Test.123\",\n  \"age\":44\n}"
+                                }
+                            }
+                        },
+                        {
+                            "name": "who am i",
+                            "request": {
+                                "method": "GET",
+                                "url": {
+                                    "raw": "http://localhost:8000/api/v1/user/whoami",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "user",
+                                        "whoami"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "8000"
+                                },
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzI2NjgxMzIzLCJleHAiOjE3MjY3Njc3MjN9.QIpRM20pDlRUZkqAB2DHs-mJNUcE-MOKYuAUuiEll20",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "seller",
+                    "item": [
+                        {
+                            "name": "login",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "http://localhost:8000/api/v1/seller/login",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "seller",
+                                        "login"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "8000"
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\n  \"email\":  \"seyit@gmail.com\",\n  \"password\":\"Test.123\"\n}"
+                                }
+                            }
+                        },
+                        {
+                            "name": "register",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "http://localhost:8000/api/v1/seller/register/",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "seller",
+                                        "register"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "8000"
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\n  \"name\":\"Mert Seyit\",\n  \"lastname\":\"Yılmaz\",\n  \"email\":\"seyit@gmail.com\",\n  \"password\":\"Test.123\"\n}"
+                                }
+                            }
+                        },
+                        {
+                            "name": "who am i",
+                            "request": {
+                                "method": "GET",
+                                "url": {
+                                    "raw": "http://localhost:8000/api/v1/seller/whoami",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "seller",
+                                        "whoami"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "8000"
+                                },
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzI2NjgxMTIwLCJleHAiOjE3MjY3Njc1MjB9.r2PbfQxgwCO8skpBzCM5E-0mnqC7u6QMqBOnkynAqZo",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "sellers",
+            "item": [
+                {
+                    "name": "profile",
+                    "item": [
+                        {
+                            "name": "update profile",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "http://localhost:8000/api/v1/seller/profile/update",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "seller",
+                                        "profile",
+                                        "update"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "8000"
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\n  \"name\":\"Mert Seyit\",\n  \"lastname\":\"Yılmaz\"\n}"
+                                },
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI1ODYyMTg3LCJleHAiOjE3MjU5NDg1ODd9.tgfSxtNwMNahRf8jFvupdMGWczfZoMr_Qb3_H_pExu8",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "name": "delete profile",
+                            "request": {
+                                "method": "DELETE",
+                                "url": {
+                                    "raw": "http://localhost:8000/api/v1/seller/profile/delete",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "seller",
+                                        "profile",
+                                        "delete"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "8000"
+                                },
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzI1ODYyNDE4LCJleHAiOjE3MjU5NDg4MTh9.FYiOBNHswMwJFKJ7J3e9LHmMX-53TeuJ8d3Om0rd87c",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "name": "update password",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "http://localhost:8000/api/v1/seller/profile/update-password",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "seller",
+                                        "profile",
+                                        "update-password"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "8000"
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\n  \"password\":\"Test.123\"\n}"
+                                },
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI1ODYzMjA3LCJleHAiOjE3MjU5NDk2MDd9.9IBbYP3ewJWO0qnN_WyMRrifxrWJhc5g0LjkilXYGM8",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "products",
+                    "item": [
+                        {
+                            "name": "add new product",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "http://localhost:8000/api/v1/seller/products/add",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "seller",
+                                        "products",
+                                        "add"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "8000"
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\n  \"name\":\"Book\",\n  \"desc\":\"This is an education material\",\n  \"category\":\"School\",\n  \"price\":50\n}"
+                                },
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzI2NjgxMTIwLCJleHAiOjE3MjY3Njc1MjB9.r2PbfQxgwCO8skpBzCM5E-0mnqC7u6QMqBOnkynAqZo",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "name": "update a product",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "http://localhost:8000/api/v1/seller/products/update/6",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "seller",
+                                        "products",
+                                        "update",
+                                        "6"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "8000"
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\n  \"name\":\"Iphone Telefon\",\n  \"desc\":\"Bu bir telefon.\"\n}"
+                                },
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzI2NjgxMTIwLCJleHAiOjE3MjY3Njc1MjB9.r2PbfQxgwCO8skpBzCM5E-0mnqC7u6QMqBOnkynAqZo",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "name": "delete a product",
+                            "request": {
+                                "method": "DELETE",
+                                "url": {
+                                    "raw": "http://localhost:8000/api/v1/seller/products/delete/6",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "seller",
+                                        "products",
+                                        "delete",
+                                        "6"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "8000"
+                                },
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzI2NjgxMTIwLCJleHAiOjE3MjY3Njc1MjB9.r2PbfQxgwCO8skpBzCM5E-0mnqC7u6QMqBOnkynAqZo",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "orders",
+                    "item": [
+                        {
+                            "name": "get all orders",
+                            "request": {
+                                "method": "GET",
+                                "url": {
+                                    "raw": "http://localhost:8000/api/v1/seller/order/",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "seller",
+                                        "order"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "8000"
+                                },
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzI2NjgxMTIwLCJleHAiOjE3MjY3Njc1MjB9.r2PbfQxgwCO8skpBzCM5E-0mnqC7u6QMqBOnkynAqZo",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "orders_product",
+                    "item": [
+                        {
+                            "name": "order detail",
+                            "request": {
+                                "method": "GET",
+                                "url": {
+                                    "raw": "http://localhost:8000/api/v1/seller/orders-products/",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "seller",
+                                        "orders-products"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "8000"
+                                },
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzI2NjgxMTIwLCJleHAiOjE3MjY3Njc1MjB9.r2PbfQxgwCO8skpBzCM5E-0mnqC7u6QMqBOnkynAqZo",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "users",
+            "item": [
+                {
+                    "name": "profile",
+                    "item": [
+                        {
+                            "name": "update profile",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "http://localhost:8000/api/v1/user/profile/update",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "user",
+                                        "profile",
+                                        "update"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "8000"
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\n  \"name\":\"Mert Seyit\",\n  \"lastname\":\"Yılmaz\"\n}"
+                                },
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzI1ODg0MjQ0LCJleHAiOjE3MjU5NzA2NDR9.uy7OeG72YUzq_SF-5b9jlOBS3R6pL02HALpiH7LAesk",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "name": "delete profile",
+                            "request": {
+                                "method": "DELETE",
+                                "url": {
+                                    "raw": "http://localhost:8000/api/v1/user/profile/delete",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "user",
+                                        "profile",
+                                        "delete"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "8000"
+                                },
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzI1ODYyNDE4LCJleHAiOjE3MjU5NDg4MTh9.FYiOBNHswMwJFKJ7J3e9LHmMX-53TeuJ8d3Om0rd87c",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "name": "update password",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "http://localhost:8000/api/v1/user/profile/update-password",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "user",
+                                        "profile",
+                                        "update-password"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "8000"
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\n  \"password\":\"Test.123\"\n}"
+                                },
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI1ODYzMjA3LCJleHAiOjE3MjU5NDk2MDd9.9IBbYP3ewJWO0qnN_WyMRrifxrWJhc5g0LjkilXYGM8",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "orders",
+                    "item": [
+                        {
+                            "name": "create an order",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "http://localhost:8000/api/v1/user/order/create-order",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "user",
+                                        "order",
+                                        "create-order"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "8000"
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\n  \"products\": [\n    {\n      \"product_id\":7,\n      \"quantity\":1\n    },\n    {\n      \"product_id\":8,\n      \"quantity\":1\n    }\n  ],\n  \"address_id\":4\n}"
+                                },
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzI2NjgxMzIzLCJleHAiOjE3MjY3Njc3MjN9.QIpRM20pDlRUZkqAB2DHs-mJNUcE-MOKYuAUuiEll20",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "name": "get all user's orders",
+                            "request": {
+                                "method": "GET",
+                                "url": {
+                                    "raw": "http://localhost:8000/api/v1/user/order/",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "user",
+                                        "order"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "8000"
+                                },
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzI2NjgxMzIzLCJleHAiOjE3MjY3Njc3MjN9.QIpRM20pDlRUZkqAB2DHs-mJNUcE-MOKYuAUuiEll20",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "name": "cancel an order",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "http://localhost:8000/api/v1/user/order/cancel/18",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "user",
+                                        "order",
+                                        "cancel",
+                                        "18"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "8000"
+                                },
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzI1ODg4ODUxLCJleHAiOjE3MjU5NzUyNTF9.ODciazEnEG9cfv8oAKuOypaCjn4xOIz_pptGXnCVYcQ",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "address",
+                    "item": [
+                        {
+                            "name": "create an address",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "http://localhost:8000/api/v1/user/address/create",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "user",
+                                        "address",
+                                        "create"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "8000"
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\n  \"title\":\"Köyüm\",\n  \"desc\":\"Adresimin Detaylı Açıklaması\",\n  \"country\":\"Türkiye\",\n  \"city\":\"Denizli\"\n}"
+                                },
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzI2NjgxMzIzLCJleHAiOjE3MjY3Njc3MjN9.QIpRM20pDlRUZkqAB2DHs-mJNUcE-MOKYuAUuiEll20",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "name": "update an address",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "http://localhost:8000/api/v1/user/address/update/2",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "user",
+                                        "address",
+                                        "update",
+                                        "2"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "8000"
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\n  \"title\":\"Köydeki Evim\"\n}"
+                                },
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzI1ODg4ODUxLCJleHAiOjE3MjU5NzUyNTF9.ODciazEnEG9cfv8oAKuOypaCjn4xOIz_pptGXnCVYcQ",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "name": "delete an address",
+                            "request": {
+                                "method": "DELETE",
+                                "url": {
+                                    "raw": "http://localhost:8000/api/v1/user/address/delete/2",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "user",
+                                        "address",
+                                        "delete",
+                                        "2"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "8000"
+                                },
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzI1ODg4ODUxLCJleHAiOjE3MjU5NzUyNTF9.ODciazEnEG9cfv8oAKuOypaCjn4xOIz_pptGXnCVYcQ",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "name": "get all addresses",
+                            "request": {
+                                "method": "GET",
+                                "url": {
+                                    "raw": "http://localhost:8000/api/v1/user/address/",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "user",
+                                        "address"
+                                    ],
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "8000"
+                                },
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzI1ODg4ODUxLCJleHAiOjE3MjU5NzUyNTF9.ODciazEnEG9cfv8oAKuOypaCjn4xOIz_pptGXnCVYcQ",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "public",
+            "item": [
+                {
+                    "name": "get all products",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:8000/api/v1/public/products/",
+                            "path": [
+                                "api",
+                                "v1",
+                                "public",
+                                "products"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000"
+                        }
+                    }
+                },
+                {
+                    "name": "get all users",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:8000/api/v1/public/users/",
+                            "path": [
+                                "api",
+                                "v1",
+                                "public",
+                                "users"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

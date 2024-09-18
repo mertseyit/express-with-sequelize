@@ -20,4 +20,32 @@ Bu proje, ExpressJS ve Sequelize kullanılarak oluşturulmuş basit bir e-ticare
 
 1. Projeyi lokalinize klonlayın:
 
-   ` git clone https://github.com/mertseyit/proje-adi.git`
+   `git clone https://github.com/mertseyit/express-with-sequelize.git `
+
+2. Proje dizinine gidin ve paketleri indirin
+
+   `cd express-with-sequelize `
+
+   `npm install`
+
+   Not: eğer `nodemon` paketini daha öncelerden global olarak indirmediyseniz: `npm i nodemon` ile nodemon paketini de projenize dahil edin.
+
+## Ortam Değişkenlerinin Kurulması
+
+src klasörü içindeki `.env` dosyasınında kendi ayarlamalarınızı yapınız.
+
+## Projenin Başlatılması
+
+`npm run dev`
+
+## Veritabanının ve Tabloların Oluşturulması
+
+Proje içerisinde migrate sistemi olmadığından dolayı veri tabanlarını kendiniz oluşturmanız gerekmektedir. Bu veri tabanlarını istediğiniz DBMS üzerinden `models` klasörü altındaki yer alan modelleri referans alarak oluşturabilirsiniz.`
+
+# Postman
+
+Postman ortamlarında API'leri test etmek isterseniz `test_api.json` dosyasını postman uygulamanıza import edebilirsiniz.
+
+## Lisanslama
+
+Bu proje MIT lisansı ile lisanlanmıştır.
